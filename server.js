@@ -14,11 +14,5 @@ server.listen(port, hostname, () => {
 })
 
 
-//const app = require ('./api/application')
 
-
-//const express = require ("express")
-//const core = require ("cors")
-
-//const application = require ()
 
