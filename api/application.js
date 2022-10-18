@@ -8,7 +8,7 @@ app.use("/app/user", userRoute)
 const commentsRoute = require("./Routes/comments")
 app.use("/app/comments", commentsRoute)
 
-const signupRoute = require("./Routes/signup")
-app.use("/app/signup", signupRoute)
+const auth_router = require("./Routes/authentication.routes")
+app.use("/app/signup", auth_router)
 
 module.exports = app
