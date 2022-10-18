@@ -1,5 +1,5 @@
-const express = require("express")
-const commentsRoute = express.Router()
+const express = require("express") // import express
+const commentsRoute = express.Router() // define the route function & initialize with express
 
 commentsRoute.get("/", (req, res, next) => {
 
@@ -8,4 +8,4 @@ commentsRoute.get("/", (req, res, next) => {
         })
 })
 
-module.exports = commentsRoute
+module.exports = commentsRoute // export the route function to be used in application.js
