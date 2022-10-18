@@ -2,13 +2,13 @@
 const express = require('express')
 const app = express()
 
+const userRoute = require("./Routes/user")
+app.use("/app/user", userRoute)
 
-app.get('/:paramName', (req, res, next) => {
-   const {paramName} = req.params
+const commentsRoute = require("./Routes/comments")
+app.use("/app/comments", commentsRoute)
 
-    res.status(200).json({
-      message: 'Hello,' + paramName
-    })
-})
+const signupRoute = require("./Routes/signup")
+app.use("/app/signup", signupRoute)
 
 module.exports = app
