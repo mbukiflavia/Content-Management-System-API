@@ -1,18 +1,8 @@
-const http = require ('http') // include Node.js http module
+const http = require('http')
+const app = require('./api/application')
+const port = 3000 || process.env.port
 
-const hostname = "localhost"
-const port = 3000 
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200 //set the statusCode property to 200, to indicate a successful response
-    res.setHeader ("content-type", "text/plain") //We set the Content-Type header:
-    res.end("Hello, World") //close the response, adding the content as an argument to end():
-})
-
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`)
-})
-
-
+const server = http.createServer(app)
+server.listen(port)
 
 

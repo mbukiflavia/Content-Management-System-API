@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "nodemon server.js"
+    "start": "node server.js",
+    "greet": "nodemon server.js"
+    
   },
   "keywords": [
     "Backend",
@@ -15,7 +17,9 @@
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.1",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.20"
   }
 }
