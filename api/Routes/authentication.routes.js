@@ -38,8 +38,8 @@ auth_router.post('/register', (req, res, next) => {
 
 auth_router.post('/login', (req, res, next) => {
 
-    const { email, password } = req.body
-
+const { email, password } = req.body
+    
     res.status(200).json({
         message: 'Thank you for registering.',
         data: {
