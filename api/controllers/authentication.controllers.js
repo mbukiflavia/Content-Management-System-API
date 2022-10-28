@@ -68,7 +68,7 @@ const loginController = (req, res, next) => {
     const { email, password } = req.body
     console.log(email + "\n" + password)
 
-    UserModel.findOne({ email: email})
+    UserModel.findOne({ email: email })
         .exec()
         .then(accountExists => {
             if (accountExists != null) {
@@ -83,16 +83,17 @@ const loginController = (req, res, next) => {
                     }
                 })
             } else {
-                
+                res.status(500).json({
+                    error: "Authentication Failed!"
+                })
             }
         })
-        .catch( error => {
+
+        .catch(error => {
             res.status(500).json({
                 error: error.message
             })
         })
-
-    
 }
 
 const updatePassword = (req, res, next) => {
@@ -144,7 +145,3 @@ module.exports = {
     loginController,
     updatePassword
 }
-       
-        
-
-      
